@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  
+
   configureWebpack: {
     plugins: [
       new webpack.DefinePlugin({
@@ -12,5 +12,7 @@ module.exports = defineConfig({
         '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': JSON.stringify(false) // Fix the warning
       })
     ]
-  }
+  },
+
+  publicPath: process.env.NODE_ENV === "production" ? "/Resto-vue/" : "/"
 });
