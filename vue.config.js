@@ -14,5 +14,5 @@ module.exports = defineConfig({
     ]
   },
 
-  publicPath: process.env.NODE_ENV === "production" ? "/Resto-vue/" : "/"
+  publicPath: process.env.NODE_ENV === "production" ? "Resto-vue" : "/"
 });
